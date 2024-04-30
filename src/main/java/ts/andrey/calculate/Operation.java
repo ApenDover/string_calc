@@ -92,8 +92,8 @@ public class Operation {
      * берется первое вхождение оператора и окружающая пара чисел
      * возвращается изначальная строка с вставленным результатом
      *
-     * @param string
-     * @param operation
+     * @param string 100+8-2+6*2
+     * @param operation 100+8-2+12.0
      * @return
      */
     public static String countAtString(String string, Character operation) {
