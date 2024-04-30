@@ -8,6 +8,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class OperationTest {
 
     @Test
+    void errorStaples() {
+        //GIVEN
+        final var string = "(30-(6+(8-2)*2+2)*2";
+        //WHEN
+        assertThrows(IllegalArgumentException.class, () -> Operation.openStaples(string));
+    }
+
+    @Test
     void openStaplesVar1() {
         //GIVEN
         final var string = "30-(6+(8-2)*2+2)*2";

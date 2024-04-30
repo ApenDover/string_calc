@@ -18,6 +18,9 @@ public class Operation {
      * @return 6+2
      */
     public static String openStaples(String string) {
+        if (StringUtils.countMatches(string, "(") != StringUtils.countMatches(string, ")")) {
+            throw new IllegalArgumentException("error with staples");
+        }
         if (!string.contains("(")) {
             return string;
         }
@@ -92,7 +95,7 @@ public class Operation {
      * берется первое вхождение оператора и окружающая пара чисел
      * возвращается изначальная строка с вставленным результатом
      *
-     * @param string 100+8-2+6*2
+     * @param string    100+8-2+6*2
      * @param operation 100+8-2+12.0
      * @return
      */
